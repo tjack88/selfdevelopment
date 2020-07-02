@@ -1,0 +1,94 @@
+html {
+    background-color: #ebebff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'kg_always_a_good_timeregular';
+    margin-top: 30px;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.balloon-pop-game {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+    flex-wrap: wrap;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'kg_always_a_good_timeregular';
+    color: green;
+}
+
+.balloon-container {
+    position: relative;
+    display: flex;
+    margin: 5px;
+}
+
+.balloon-container:nth-child(2n-7) .balloon {
+    background-color: blue;
+}
+.balloon-container:nth-child(4n-7) .balloon {
+    background-color: green;
+}
+.balloon-container:nth-child(7n-7) .balloon {
+    background-color: pink;
+}
+.balloon-container:nth-child(9n-7) .balloon {
+    background-color: purple;
+}
+.balloon-container:nth-child(10n-7) .balloon {
+    background-color: gold;
+}
+.balloon-container:nth-child(4n-6) .balloon {
+    background-color: black;
+}
+
+.balloon {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.pop {
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-family: 'kg_always_a_good_timeregular';
+    font-size: 25px;
+    color: blue;
+}
+
+.not-visible {
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: 'kg_always_a_good_timeregular';
+    src: url('kgalwaysagoodtime-webfont.woff2') format('woff2'),
+         url('kgalwaysagoodtime-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
