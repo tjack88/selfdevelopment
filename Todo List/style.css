@@ -1,0 +1,66 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 60px;
+	text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"], button {
+	padding: 10px;
+	font-size: 23px;
+}
+
+ul {
+    width: 500px;
+}
+
+ul li {
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+ul li button {
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+#dataOutput {
+    display: flex;
+    justify-content: center;
+}
+
+#error {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
