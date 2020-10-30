@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            padding-top: 50px;
+            background-image: url("bg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+       }
+
+       .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+       }
+
+       p {
+            font-family: 'akbar_plain', Helvetica, sans-serif;
+            font-size: 22px;
+            width: 60%;
+            text-align: center;
+            width: 60%;
+       }
+
+       button {
+            margin-top: 30px;
+            box-shadow:inset 0px 1px 0px 0px #fff6af;
+            background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+            background-color:#ffec64;
+            border-radius:6px;
+            border:1px solid #ffaa22;
+            display:inline-block;
+            cursor:pointer;
+            color:#333333;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:20px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #ffee66;
+       }
+       
+       button:hover {
+            background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+            background-color:#ffab23;
+       }
+
+       button:active {
+            position:relative;
+            top:1px;
+       }
+
+       @font-face {
+            font-family: 'akbar_plain';
+            src: url('simpsonfont-webfont.woff2') format('woff2'),
+            url('simpsonfont-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p></p>
+        <button>Get a random quote</button>
+    </div>
+</body>
+<script>
+    const quote = document.querySelector('p');
+    const button = document.querySelector('button')
+    const quoteArray = ['Wow.. this place has windows?, i\'m not sure if I can afford this place', 'Alcohol, the solution and cause to all of life\'s problems', 'My eyes, the goggles do nothing', 'You don\'t win friends with salad!', 'Weaselling out of things is what separates us from the animals... except the weasel', 'Does this sound like a man who had ALL he could eat?', 'My ankles are wet but my cuffs are bone dry! Everything\'s comin up Milhouse!', 'I wash myself with a rag on a stick', 'The waiting game sucks. Let\'s play Hungry Hungry Hippos.', 'I\'ve sold monorails to Brockway, Ogdenville, and North Haverbrook, and by gum it put them on the map!', 'If you don\'t like your job, you don\'t go on strike. You just go in every day and do it really half-assed - that\'s the American way.!', 'I like my beer cold, my TV loud, and my homosexuals FLAMING!'];
+
+    function quoteMachine() {
+        const randomQuote = quoteArray[Math.floor(Math.random()*quoteArray.length)];
+        const outputQuote = quote.innerHTML = randomQuote;
+    }
+
+    quoteMachine();
+
+    button.addEventListener('click', quoteMachine)
+
+</script>
+
+</html>
